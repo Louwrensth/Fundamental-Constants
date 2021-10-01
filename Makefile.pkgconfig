@@ -1,0 +1,26 @@
+
+# Multi purpose canned recipe
+define run-sed-template
+	$(if $(wildcard $(dir $@)),,$(mkdir_p) $(dir $@))
+	sed -e "s;@VERSION@;$(PKG_VERSION);g" \
+		-e "s;@NAME@;$(PKG_NAME);g" \
+		-e "s;@FULLNAME@;$(PKG_FULLNAME);g" \
+		-e "s;@prefix@;$(DESTDIR)$(prefix);g" \
+		$< > $@
+endef
+
+.PHONY: $(PC_FILES)
+$(PC_FILES): %:%.in
+	$(run-sed-template)
+
+pkgconfig: $(PC_FILES)
+pkgconfig_clean:
+	$(RM) $(PC_FILES)
+
+pkgconfig_install: $(PC_FILES)
+	$(MKDIR_P) $(DESTDIR)$(libdir)/pkgconfig
+	$(INSTALL_DATA) $^ $(DESTDIR)$(libdir)/pkgconfig
+
+pkgconfig_uninstall:
+	-rm -f $(addprefix $(DESTDIR)$(libdir)/pkgconfig/,$(notdir $(PC_FILES)))
+	-rmdir -p $(DESTDIR)$(libdir)/pkgconfig

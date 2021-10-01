@@ -1,0 +1,8 @@
+prefix=@prefix@
+includedir=${prefix}/include
+
+Name: @NAME@-fortran
+Version: @VERSION@
+Description: @FULLNAME@ (Fortran sources)
+URL: https://imas.iter.org
+Cflags: -I${includedir}

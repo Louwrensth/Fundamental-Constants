@@ -1,0 +1,13 @@
+PKG_VERSION = 0.1.0
+PKG_NAME = imas-constants
+PKG_FULLNAME = IMAS Constants
+
+# Boilerplate
+prefix = /usr/local
+includedir = $(prefix)/include
+libdir = $(prefix)/lib
+MKDIR_P = mkdir -p
+RM = rm -f
+PYTHON = python
+INSTALL = /usr/bin/install -c
+INSTALL_DATA = $(INSTALL) -m 644
