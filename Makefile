@@ -1,2 +1,2 @@
-all clean install:
+all release clean install:
 	$(MAKE) -C fortran $@

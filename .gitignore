@@ -1,2 +1,3 @@
 *.pc
 *.f90
+!fortran/release*/*.*
