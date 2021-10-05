@@ -32,7 +32,7 @@ def make_f90_sources(output_dir = Path('.')):
 !-------------------------------------------------------------------------------
 
 module {module_name}
-  use, intrinsic:: iso_fortran_env, only: wp = > real64
+  use, intrinsic:: iso_fortran_env, only: wp => real64
   implicit none
 """.format(
                 file_name=output_file.name, module_name=module_name,
@@ -72,7 +72,7 @@ module {module_name}
 !-------------------------------------------------------------------------------
 
 module {module_name}
-  use, intrinsic:: iso_fortran_env, only: wp = > real64
+  use, intrinsic:: iso_fortran_env, only: wp => real64
   implicit none
 """.format(
                     file_name=output_file.name, module_name=module_name,
