@@ -1,6 +1,6 @@
 PKG_VERSION = 0.1.0
-PKG_NAME = imas-constants
-PKG_FULLNAME = IMAS Constants
+PKG_NAME = fundamental-constants
+PKG_FULLNAME = Fundamental Constants
 
 # Boilerplate
 prefix = /usr/local

@@ -48,16 +48,17 @@ module {module_name}
     ###
     # Traverse physical constant series
     # Produce a named Fortran module for each
-    for module_name, physical_constants in {
-        "physical_constants_2002": _cd._physical_constants_2002,
-        "physical_constants_2006": _cd._physical_constants_2006,
-        "physical_constants_2010": _cd._physical_constants_2010,
-        "physical_constants_2014": _cd._physical_constants_2014,
-        "physical_constants_2018": _cd._physical_constants_2018,
+    for dataset_name, physical_constants in {
+        "codata_2002": _cd._physical_constants_2002,
+        "codata_2006": _cd._physical_constants_2006,
+        "codata_2010": _cd._physical_constants_2010,
+        "codata_2014": _cd._physical_constants_2014,
+        "codata_2018": _cd._physical_constants_2018,
     }.items():
 
         # Fortran module begins
-        output_file = output_dir / "{module_name}.f90".format(module_name=module_name)
+        module_name = "codata"
+        output_file = output_dir / "{}.f90".format(dataset_name)
 
         with output_file.open("w") as file:
             print("Writing {}".format(output_file))
@@ -77,7 +78,6 @@ module {module_name}
 """.format(
                     file_name=output_file.name, module_name=module_name,
                     scipy_version=scipy.version.full_version
-
                 )
             )
             # Traverse physical constant name,value pairs

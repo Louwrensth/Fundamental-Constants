@@ -1,5 +1,5 @@
 !-------------------------------------------------------------------------------
-! physical_constants_2002.f90
+! codata_2002.f90
 ! Fundamental Physical Constants
 ! ------------------------------
 ! These constants are taken from CODATA Recommended Values of the Fundamental
@@ -7,8 +7,8 @@
 ! Generated using SciPy version 1.6.3
 !-------------------------------------------------------------------------------
 
-module physical_constants_2002
-  use, intrinsic:: iso_fortran_env, only: wp = > real64
+module codata
+  use, intrinsic:: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: Wien_displacement_law_constant = 0.0028977685_wp  ! (5.1e-09) m K (obsolete)
   real(wp), parameter :: atomic_unit_of_1st_hyperpolarizablity = 3.20636151e-53_wp  ! (2.8e-60) C^3 m^3 J^-2 (obsolete)
@@ -68,4 +68,4 @@ module physical_constants_2002
   real(wp), parameter :: shielded_proton_magn__moment_to_Bohr_magneton_ratio = 0.001520993132_wp  ! (1.6e-11)  (obsolete)
   real(wp), parameter :: shielded_proton_magn__moment_to_nuclear_magneton_ratio = 2.792775604_wp  ! (3e-08)  (obsolete)
   real(wp), parameter :: _220__lattice_spacing_of_silicon = 1.920155965e-10_wp  ! (7e-18) m (obsolete)
-end module physical_constants_2002
+end module codata

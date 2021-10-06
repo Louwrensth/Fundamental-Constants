@@ -1,5 +1,5 @@
 !-------------------------------------------------------------------------------
-! physical_constants_2018.f90
+! codata_2018.f90
 ! Fundamental Physical Constants
 ! ------------------------------
 ! These constants are taken from CODATA Recommended Values of the Fundamental
@@ -7,8 +7,8 @@
 ! Generated using SciPy version 1.6.3
 !-------------------------------------------------------------------------------
 
-module physical_constants_2018
-  use, intrinsic:: iso_fortran_env, only: wp = > real64
+module codata
+  use, intrinsic:: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: alpha_particle_electron_mass_ratio = 7294.29954142_wp  ! (2.4e-07) 
   real(wp), parameter :: alpha_particle_mass = 6.6446573357e-27_wp  ! (2e-36) kg
@@ -363,4 +363,4 @@ module physical_constants_2018
   real(wp), parameter :: Wien_frequency_displacement_law_constant = 58789257570.0_wp  ! (0.0) Hz K^-1
   real(wp), parameter :: Wien_wavelength_displacement_law_constant = 0.002897771955_wp  ! (0.0) m K
   real(wp), parameter :: W_to_Z_mass_ratio = 0.88153_wp  ! (0.00017) 
-end module physical_constants_2018
+end module codata

@@ -1,5 +1,5 @@
 !-------------------------------------------------------------------------------
-! physical_constants_2014.f90
+! codata_2014.f90
 ! Fundamental Physical Constants
 ! ------------------------------
 ! These constants are taken from CODATA Recommended Values of the Fundamental
@@ -7,8 +7,8 @@
 ! Generated using SciPy version 1.6.3
 !-------------------------------------------------------------------------------
 
-module physical_constants_2014
-  use, intrinsic:: iso_fortran_env, only: wp = > real64
+module codata
+  use, intrinsic:: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: _220__lattice_spacing_of_silicon = 1.920155714e-10_wp  ! (3.2e-18) m (obsolete)
   real(wp), parameter :: alpha_particle_electron_mass_ratio = 7294.29954136_wp  ! (2.4e-07) 
@@ -345,4 +345,4 @@ module physical_constants_2014
   real(wp), parameter :: weak_mixing_angle = 0.2223_wp  ! (0.0021) 
   real(wp), parameter :: Wien_frequency_displacement_law_constant = 58789238000.0_wp  ! (34000.0) Hz K^-1
   real(wp), parameter :: Wien_wavelength_displacement_law_constant = 0.0028977729_wp  ! (1.7e-09) m K
-end module physical_constants_2014
+end module codata
