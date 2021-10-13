@@ -1,7 +1,7 @@
 prefix=@prefix@
 includedir=${prefix}/include
 
-Name: @NAME@-fortran
+Name: @NAME@
 Version: @VERSION@
 Description: @FULLNAME@
 URL: https://imas.iter.org
