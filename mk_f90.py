@@ -85,7 +85,7 @@ module {module_name}
 
                 # Flatten pretty long name:
                 # replace all non alphanumeric characters by underscores
-                name = re.sub(r"[()]", "", pretty_key)  # first omit parentheses
+                name = re.sub(r"[(),\.]", "", pretty_key)  # first omit parentheses commas and periods
                 name = re.sub(r"[^A-z0-9]", "_", name)
 
                 if pretty_key in _cd._obsolete_constants.keys():
@@ -95,10 +95,11 @@ module {module_name}
 
                 # Unpack dictionary value items
                 value, unit, uncertainty = dict_value
+                unit = " " + unit if unit != "" else ""
 
                 # Fortran named constant definition
                 file.write(
-                    "  real(wp), parameter :: {} = {}_wp  ! ({}) {}{}\n".format(name, value, uncertainty, unit, obsolete)
+                    "  real(wp), parameter :: {} = {}_wp  ! ({}){}{}\n".format(name, value, uncertainty, unit, obsolete)
                 )
 
             # Fortran module ends
