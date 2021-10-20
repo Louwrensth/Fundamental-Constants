@@ -4,8 +4,9 @@
 # e.g. PKG_CONFIG_PATH=$(DESTDIR)$(libdir)/pkgconfig
 
 FC = gfortran
-FCFLAGS = `pkg-config fundamental-constants --cflags`
-PROGS = test_constants.x
+CXX = g++
+CFLAGS = `pkg-config fundamental-constants --cflags`
+PROGS = test_constants.x test_constants.xx
 
 all: $(PROGS)
 
@@ -13,7 +14,10 @@ check: $(PROGS)
 	for PROG in $^ ;do echo ./$$PROG; $$_ || exit 1 ;done
 
 clean:
-	$(RM) *.x *.mod
+	$(RM) *.x *.xx *.mod
 
 %.x: %.f90
-	$(FC) $(FCFLAGS) $< -o $@
+	$(FC) $(CFLAGS) $< -o $@
+
+%.xx: %.cpp
+	$(CXX) $(CFLAGS) $< -o $@
