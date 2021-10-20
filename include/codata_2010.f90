@@ -8,7 +8,7 @@
 !-------------------------------------------------------------------------------
 
 module codata
-  use, intrinsic:: iso_fortran_env, only: wp => real64
+  use, intrinsic :: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: _220__lattice_spacing_of_silicon = 1.920155714e-10_wp  ! (3.2e-18) m (obsolete)
   real(wp), parameter :: alpha_particle_electron_mass_ratio = 7294.2995361_wp  ! (2.9e-06)

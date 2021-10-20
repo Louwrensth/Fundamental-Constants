@@ -8,7 +8,7 @@
 !-------------------------------------------------------------------------------
 
 module codata
-  use, intrinsic:: iso_fortran_env, only: wp => real64
+  use, intrinsic :: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: alpha_particle_electron_mass_ratio = 7294.29954142_wp  ! (2.4e-07)
   real(wp), parameter :: alpha_particle_mass = 6.6446573357e-27_wp  ! (2e-36) kg

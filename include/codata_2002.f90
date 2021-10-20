@@ -8,7 +8,7 @@
 !-------------------------------------------------------------------------------
 
 module codata
-  use, intrinsic:: iso_fortran_env, only: wp => real64
+  use, intrinsic :: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: Wien_displacement_law_constant = 0.0028977685_wp  ! (5.1e-09) m K (obsolete)
   real(wp), parameter :: atomic_unit_of_1st_hyperpolarizablity = 3.20636151e-53_wp  ! (2.8e-60) C^3 m^3 J^-2 (obsolete)
