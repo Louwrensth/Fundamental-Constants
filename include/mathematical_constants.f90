@@ -10,6 +10,4 @@ module mathematical_constants
   use, intrinsic :: iso_fortran_env, only: wp => real64
   implicit none
   real(wp), parameter :: M_PI = 3.14159265358979_wp
-  real(wp), parameter :: M_E = 2.71828182845905_wp
-  real(wp), parameter :: M_SQRT2 = 1.4142135623731_wp
 end module mathematical_constants

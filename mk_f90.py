@@ -9,12 +9,10 @@ def make_f90_sources(output_dir = Path('.')):
     '''Write .f90 source files to an output_dir'''
     ###
     # Write multi-precision math constants
-    # they are better than double-limited standard math (which are limited to 14 digits)
+    # they are better than double-limited standard math (which are limited to 15 digits)
     mp.dps = 64  # go for 64 digits
     math_constants = {
         "M_PI": mp.pi(),
-        "M_E": mp.e(),
-        "M_SQRT2": mp.sqrt(2),
     }
 
     # Fortran module begins
