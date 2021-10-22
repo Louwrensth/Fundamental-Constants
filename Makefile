@@ -29,6 +29,7 @@ all: $(GEN_SOURCES) pkgconfig
 
 clean: pkgconfig_clean
 	$(RM) $(GEN_SOURCES)
+	$(MAKE) -C examples $@
 
 install: $(GEN_SOURCES) pkgconfig_install
 	$(MKDIR_P) $(DESTDIR)$(includedir)
