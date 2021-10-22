@@ -4,8 +4,8 @@ from pathlib import Path
 import scipy.version
 import scipy.constants.codata as _cd
 
-def make_hpp_sources(output_dir = Path('.')):
-    '''Write .hpp source files to an output_dir'''
+def make_h_sources(output_dir = Path('.')):
+    '''Write .h source files to an output_dir'''
 
     ###
     # Traverse physical constant series
@@ -20,7 +20,7 @@ def make_hpp_sources(output_dir = Path('.')):
 
         # Namespace begins
         namespace = "codata"
-        output_file = output_dir / "{}.hpp".format(dataset_name)
+        output_file = output_dir / "{}.h".format(dataset_name)
 
         with output_file.open("w") as file:
             print("Writing {}".format(output_file))
@@ -38,9 +38,8 @@ def make_hpp_sources(output_dir = Path('.')):
 #ifndef {header_name}_H
 #define {header_name}_H
 
-namespace {namespace} {{
 """.format(
-                    file_name=output_file.name, namespace=namespace,
+                    file_name=output_file.name,
                     header_name=dataset_name.upper(),
                     scipy_version=scipy.version.full_version
                 )
@@ -62,16 +61,17 @@ namespace {namespace} {{
                 value, unit, uncertainty = dict_value
                 unit = " " + unit if unit != "" else ""
 
-                # C++ named constant definition
+                # C named constant definition, prefix with namespace_
                 file.write(
-                    "  static const double {} = {};  // ({}){}{}\n".format(name, value, uncertainty, unit, obsolete)
+                    "static const double {}_{} = {};  // ({}){}{}\n".format(namespace, name, value, uncertainty, unit, obsolete)
                 )
 
             # Namespace ends
             file.write(
-                "}}  // namespace {}\n\n#endif  // {}_H\n".format(namespace, dataset_name.upper())
+                "\n#endif  // {}_H\n".format(dataset_name.upper())
             )
 
 
 if __name__ == "__main__":
-    make_hpp_sources()
+    make_h_sources()
+
