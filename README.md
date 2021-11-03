@@ -14,7 +14,6 @@ Contact: imas-support@iter.org
 Repository: https://git.iter.org/projects/IMAS/repos/fundamental-constants
 
 
-
 # Examples
 
 See the examples directory
@@ -68,11 +67,11 @@ int main(int argc, const char* argv[])
 
 ## Fortran (2008+)
 
-Because π is not already commonly provide to Fortran via standard library it
-is providede here as well for convenience.
-
 The fortran header files are suitable for version 2008 and up because of the use
 of `iso_fortran_env` to refer to the defined data type (`real64`).
+
+Because π is not already commonly provided to Fortran via standard library it
+is provided here as well for convenience.
 
 The constants are found in the `codata` (`mathematical_constants`) module name:
 
