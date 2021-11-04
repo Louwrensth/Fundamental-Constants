@@ -32,9 +32,9 @@ clean: pkgconfig_clean
 	$(MAKE) -C examples $@
 
 install: $(GEN_SOURCES) pkgconfig_install
-	$(MKDIR_P) $(DESTDIR)$(includedir)
+	$(MKDIR_P) $(DESTDIR)$(includedir) $(DESTDIR)$(docdir)
 	$(INSTALL_DATA) $(GEN_SOURCES) $(DESTDIR)$(includedir)
-	$(INSTALL_DATA) README.md $(DESTDIR)
+	$(INSTALL_DATA) README.md $(DESTDIR)$(docdir)
 
 installcheck:
 	$(MAKE) -C examples PKG_CONFIG_PATH=$(DESTDIR)$(libdir)/pkgconfig clean check

@@ -1,28 +1,32 @@
 
 # Fundamental Constants
 
-... of physical quantities with the values according to the latest CODATA
-recommendation as well as previous recommendations.
+Fundamental Constants of Physical Quantities with values according to the
+latest CODATA recommendation as well as previous recommendations, are hereby
+provided as minimal, zero-dependent, header-only source files for use in any C,
+C++, or Fortran program.
 
-Provided as a minimal, zero-dependencies, header-only implementation for use
-in any C, C++, or Fortran program.
+Sources are originally generated using SciPy and the results are hardcoded via
+a commit. This ensures consistency, provenance, and ease of installation with
+dormant dependency on SciPy, until CODATA publishes a new set of recommended
+values every four years.
 
-Sources are generated through Scipy.
+Although hosted as part of IMAS on git.iter.org, this package is expressly not
+tied to IMAS and can be freely used anywhere without modification.
 
 Homepage: https://imas.iter.org/
 Contact: imas-support@iter.org
 Repository: https://git.iter.org/projects/IMAS/repos/fundamental-constants
 
-
 # Examples
 
-See the examples directory
+Please see the `examples` directory to find source files of the examples below.
 
 ## C / C++
 
-There are two header values available, one for C/C++ and one for C++ only.
+There are two header files available, one for C/C++ and one for C++ only.
 
-They don't differ very much. The only difference is the C header does not 
+They don't differ very much. The only difference is the C header does not
 use namespaces and the globally defined constants are all prefixed with
 `codata_` for clarity and to prevent clashes.
 
@@ -67,11 +71,11 @@ int main(int argc, const char* argv[])
 
 ## Fortran (2008+)
 
-The fortran header files are suitable for version 2008 and up because of the use
-of `iso_fortran_env` to refer to the defined data type (`real64`).
+The Fortran header files use the Fortran 2008 standard because of the use
+of the `iso_fortran_env` feature providing the kind parameter named `real64`.
 
-Because π is not already commonly provided to Fortran via standard library it
-is provided here as well for convenience.
+Because π is not by default provided to Fortran users via a standard library,
+it is provided here for convenience.
 
 The constants are found in the `codata` (`mathematical_constants`) module name:
 
@@ -87,6 +91,6 @@ program test_physical_constants
 
   print *,electron_mass
   print *,PI
-  
+
 end program test_physical_constants
 ```
