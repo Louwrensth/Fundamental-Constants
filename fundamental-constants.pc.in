@@ -1,5 +1,5 @@
 prefix=@prefix@
-includedir=${prefix}/include
+includedir=${prefix}/include/@NAME@
 
 Name: @NAME@
 Version: @VERSION@

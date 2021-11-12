@@ -4,7 +4,7 @@ PKG_FULLNAME = Fundamental Constants
 
 # Boilerplate
 prefix = /usr/local
-includedir = $(prefix)/include
+includedir = $(prefix)/include/$(PKG_NAME)
 libdir = $(prefix)/lib
 datarootdir = $(prefix)/share
 docdir = $(datarootdir)/doc/$(PKG_NAME)
