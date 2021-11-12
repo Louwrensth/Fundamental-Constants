@@ -1,6 +1,5 @@
-include 'mathematical_constants.f90'
-
-include 'codata_2018.f90'
+include 'mathematical_constants.f90'  ! Excellent math constant lives here
+include 'codata_2018.f90'      ! Recommended physical constants since 2018
 
 program test_physical_constants
   use codata, only: electron_mass

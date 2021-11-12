@@ -14,8 +14,8 @@ values every four years.
 Although hosted as part of IMAS on git.iter.org, this package is expressly not
 tied to IMAS and can be freely used anywhere without modification.
 
-Homepage: https://imas.iter.org/
-Contact: imas-support@iter.org
+Homepage: https://imas.iter.org/ \
+Contact: imas-support@iter.org \
 Repository: https://git.iter.org/projects/IMAS/repos/fundamental-constants
 
 # Examples
@@ -71,7 +71,7 @@ int main(int argc, const char* argv[])
 
 ## Fortran (2008+)
 
-The Fortran header files use the Fortran 2008 standard because of the use
+The Fortran include files follow the Fortran 2008 standard because of the use
 of the `iso_fortran_env` feature providing the kind parameter named `real64`.
 
 Because π is not by default provided to Fortran users via a standard library,
@@ -80,9 +80,8 @@ it is provided here for convenience.
 The constants are found in the `codata` (`mathematical_constants`) module name:
 
 ```
-include 'mathematical_constants.f90'
-
-include 'codata_2018.f90'
+include 'mathematical_constants.f90'  ! Excellent math constant lives here
+include 'codata_2018.f90'      ! Recommended physical constants since 2018
 
 program test_physical_constants
   use codata, only: electron_mass
