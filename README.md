@@ -26,8 +26,8 @@ Please see the `examples` directory to find source files of the examples below.
 
 There are two header files available, one for C/C++ and one for C++ only.
 
-They don't differ very much. The only difference is the C header does not
-use namespaces and the globally defined constants are all prefixed with
+They don't differ very much. The only difference is that the C header does not
+use namespaces. Instead, the globally defined constants are all prefixed with
 `codata_` for clarity and to prevent clashes.
 
 ```
@@ -37,11 +37,14 @@ use namespaces and the globally defined constants are all prefixed with
 
 int main(int argc, const char* argv[])
 {
-    double electron_mass = codata_electron_mass;
-    double PI = M_PI;
+    // It is recommended to use your own names for the constants as the CODATA
+    // constants have names that are typically long to be descriptive and they
+    // sometimes also change in a next publication.
+    const double e_mass = codata_electron_mass;
+    const double PI = M_PI;
     // Double values can have max ~15.95 digits of precision (53-bit significand precision)
     // Use G formatting to print as many as needed given the constant's value
-    printf("   %10.15G\n", electron_mass);
+    printf("   %10.15G\n", e_mass);
     printf("   %10.15G\n", PI);
     return 0;
 }
@@ -50,7 +53,7 @@ int main(int argc, const char* argv[])
 ## C++ only
 
 If using the `.hpp` header for C++, one uses the `codata` namespace
-to access the constant, but the example is otherwise identical to above:
+to access the constant, but the example is otherwise identical to the above:
 
 ```
 #include <cstdio>
@@ -59,11 +62,14 @@ to access the constant, but the example is otherwise identical to above:
 
 int main(int argc, const char* argv[])
 {
-    double electron_mass = codata::electron_mass;
-    double PI = M_PI;
+    // It is recommended to use your own names for the constants as the CODATA
+    // constants have names that are typically long to be descriptive and they
+    // sometimes also change in a next publication.
+    const double e_mass = codata::electron_mass;
+    const double PI = M_PI;
     // Double values can have max ~15.95 digits of precision (53-bit significand precision)
     // Use G formatting to print as many as needed given the constant's value
-    printf("   %10.15G\n", electron_mass);
+    printf("   %10.15G\n", e_mass);
     printf("   %10.15G\n", PI);
     return 0;
 }
@@ -84,11 +90,14 @@ include 'mathematical_constants.f90'  ! Excellent math constant lives here
 include 'codata_2018.f90'      ! Recommended physical constants since 2018
 
 program test_physical_constants
-  use codata, only: electron_mass
+  ! It is recommended to use your own names for the constants as the CODATA
+  ! constants have names that are typically long to be descriptive and they
+  ! sometimes also change in a next publication.
+  use codata, only: e_mass => electron_mass
   use mathematical_constants, only: PI => M_PI
   implicit none
 
-  print *,electron_mass
+  print *,e_mass
   print *,PI
 
 end program test_physical_constants
