@@ -34,7 +34,7 @@ clean: pkgconfig_clean
 install: $(GEN_SOURCES) pkgconfig_install
 	$(MKDIR_P) $(DESTDIR)$(includedir) $(DESTDIR)$(docdir)
 	$(INSTALL_DATA) $(GEN_SOURCES) $(DESTDIR)$(includedir)
-	$(INSTALL_DATA) README.md $(DESTDIR)$(docdir)
+	$(INSTALL_DATA) README.md INSTALL.md $(DESTDIR)$(docdir)
 
 installcheck:
 	$(MAKE) -C examples PKG_CONFIG_PATH=$(DESTDIR)$(libdir)/pkgconfig clean check
