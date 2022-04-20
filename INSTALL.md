@@ -14,7 +14,7 @@ For example:
 make prefix=/opt docdir=/opt/docs
 ```
 
-Would install everything (include headers and pkg-config files) below `/opt`, but use a slightly 
+would install everything (include headers and pkg-config files) below `/opt`, but use a slightly 
 different directory to copy the documentation to (which is this file and [`README.md`](Readme.md)).
 
 [1]: https://www.gnu.org/software/make/manual/html_node/Makefile-Conventions.html
