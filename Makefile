@@ -41,9 +41,10 @@ installcheck:
 
 # Grouped targets:
 .INTERMEDIATE: h_sources hpp_sources f90_sources
-$(H_SOURCES): h_sources
-$(HPP_SOURCES): hpp_sources
-$(F90_SOURCES): f90_sources
+# Sources are order-only targets (don't remake if timestamp changed)
+$(H_SOURCES): | h_sources
+$(HPP_SOURCES): | hpp_sources
+$(F90_SOURCES): | f90_sources
 
 h_sources hpp_sources f90_sources: %_sources:$(THIS_DIR)mk_%.py | $(SRCDIR)
 	cd $(SRCDIR) && $(PYTHON) $<
