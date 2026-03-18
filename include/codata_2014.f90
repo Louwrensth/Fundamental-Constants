@@ -4,7 +4,7 @@
 ! ------------------------------
 ! These constants are taken from CODATA Recommended Values of the Fundamental
 ! Physical Constants. https://physics.nist.gov
-! Generated using SciPy version 1.6.3
+! Generated using SciPy version 1.17.1
 !-------------------------------------------------------------------------------
 
 module codata
@@ -49,7 +49,7 @@ module codata
   real(wp), parameter :: atomic_unit_of_magnetizability = 7.8910365886e-29_wp  ! (9e-38) J T^-2
   real(wp), parameter :: atomic_unit_of_mass = 9.10938356e-31_wp  ! (1.1e-38) kg
   real(wp), parameter :: atomic_unit_of_momum = 1.992851882e-24_wp  ! (2.4e-32) kg m s^-1 (obsolete)
-  real(wp), parameter :: atomic_unit_of_permittivity = 1.112650056e-10_wp  ! (0.0) F m^-1
+  real(wp), parameter :: atomic_unit_of_permittivity = 1.1126500560536183e-10_wp  ! (0.0) F m^-1
   real(wp), parameter :: atomic_unit_of_time = 2.418884326509e-17_wp  ! (1.4e-28) s
   real(wp), parameter :: atomic_unit_of_velocity = 2187691.26277_wp  ! (0.0005) m s^-1
   real(wp), parameter :: Avogadro_constant = 6.022140857e+23_wp  ! (7400000000000000.0) mol^-1
@@ -63,14 +63,14 @@ module codata
   real(wp), parameter :: Boltzmann_constant_in_eV_K = 8.6173303e-05_wp  ! (5e-11) eV K^-1
   real(wp), parameter :: Boltzmann_constant_in_Hz_K = 20836612000.0_wp  ! (12000.0) Hz K^-1
   real(wp), parameter :: Boltzmann_constant_in_inverse_meters_per_kelvin = 69.503457_wp  ! (4e-05) m^-1 K^-1 (obsolete)
-  real(wp), parameter :: characteristic_impedance_of_vacuum = 376.730313461_wp  ! (0.0) ohm (obsolete)
+  real(wp), parameter :: characteristic_impedance_of_vacuum = 376.73031346177066_wp  ! (0.0) ohm
   real(wp), parameter :: classical_electron_radius = 2.8179403227e-15_wp  ! (1.9e-24) m
   real(wp), parameter :: Compton_wavelength = 2.4263102367e-12_wp  ! (1.1e-21) m
   real(wp), parameter :: Compton_wavelength_over_2_pi = 3.8615926764e-13_wp  ! (1.8e-22) m (obsolete)
   real(wp), parameter :: conductance_quantum = 7.748091731e-05_wp  ! (1.8e-14) S
   real(wp), parameter :: conventional_value_of_Josephson_constant = 483597900000000.0_wp  ! (0.0) Hz V^-1
   real(wp), parameter :: conventional_value_of_von_Klitzing_constant = 25812.807_wp  ! (0.0) ohm
-  real(wp), parameter :: Cu_x_unit = 1.00207697e-13_wp  ! (2.8e-20) m
+  real(wp), parameter :: Cu_x_unit = 1.00207697e-13_wp  ! (2.8e-20) m (obsolete)
   real(wp), parameter :: deuteron_electron_mag_mom_ratio = -0.0004664345535_wp  ! (2.6e-12)
   real(wp), parameter :: deuteron_electron_mass_ratio = 3670.48296785_wp  ! (1.3e-07)
   real(wp), parameter :: deuteron_g_factor = 0.8574382311_wp  ! (4.8e-09)
@@ -86,7 +86,7 @@ module codata
   real(wp), parameter :: deuteron_proton_mag_mom_ratio = 0.3070122077_wp  ! (1.5e-09)
   real(wp), parameter :: deuteron_proton_mass_ratio = 1.99900750087_wp  ! (1.9e-10)
   real(wp), parameter :: deuteron_rms_charge_radius = 2.1413e-15_wp  ! (2.5e-18) m
-  real(wp), parameter :: electric_constant = 8.854187817e-12_wp  ! (0.0) F m^-1 (obsolete)
+  real(wp), parameter :: electric_constant = 8.854187817620389e-12_wp  ! (0.0) F m^-1 (obsolete)
   real(wp), parameter :: electron_charge_to_mass_quotient = -175882002400.0_wp  ! (1100.0) C kg^-1
   real(wp), parameter :: electron_deuteron_mag_mom_ratio = -2143.923499_wp  ! (1.2e-05)
   real(wp), parameter :: electron_deuteron_mass_ratio = 0.0002724437107484_wp  ! (9.6e-15)
@@ -153,7 +153,7 @@ module codata
   real(wp), parameter :: hertz_atomic_mass_unit_relationship = 4.4398216616e-24_wp  ! (2e-33) u
   real(wp), parameter :: hertz_electron_volt_relationship = 4.135667662e-15_wp  ! (2.5e-23) eV
   real(wp), parameter :: hertz_hartree_relationship = 1.5198298460088e-16_wp  ! (9e-28) E_h
-  real(wp), parameter :: hertz_inverse_meter_relationship = 3.335640951e-09_wp  ! (0.0) m^-1
+  real(wp), parameter :: hertz_inverse_meter_relationship = 3.3356409519815204e-09_wp  ! (0.0) m^-1
   real(wp), parameter :: hertz_joule_relationship = 6.62607004e-34_wp  ! (8.1e-42) J
   real(wp), parameter :: hertz_kelvin_relationship = 4.7992447e-11_wp  ! (2.8e-17) K
   real(wp), parameter :: hertz_kilogram_relationship = 7.372497201e-51_wp  ! (9.1e-59) kg
@@ -173,7 +173,7 @@ module codata
   real(wp), parameter :: joule_hertz_relationship = 1.509190205e+33_wp  ! (1.9e+25) Hz
   real(wp), parameter :: joule_inverse_meter_relationship = 5.034116651e+24_wp  ! (6.2e+16) m^-1
   real(wp), parameter :: joule_kelvin_relationship = 7.2429731e+22_wp  ! (4.2e+16) K
-  real(wp), parameter :: joule_kilogram_relationship = 1.112650056e-17_wp  ! (0.0) kg
+  real(wp), parameter :: joule_kilogram_relationship = 1.1126500560536185e-17_wp  ! (0.0) kg
   real(wp), parameter :: kelvin_atomic_mass_unit_relationship = 9.2510842e-14_wp  ! (5.3e-20) u
   real(wp), parameter :: kelvin_electron_volt_relationship = 8.6173303e-05_wp  ! (5e-11) eV
   real(wp), parameter :: kelvin_hartree_relationship = 3.1668105e-06_wp  ! (1.8e-12) E_h
@@ -186,12 +186,12 @@ module codata
   real(wp), parameter :: kilogram_hartree_relationship = 2.061485823e+34_wp  ! (2.5e+26) E_h
   real(wp), parameter :: kilogram_hertz_relationship = 1.356392512e+50_wp  ! (1.7e+42) Hz
   real(wp), parameter :: kilogram_inverse_meter_relationship = 4.524438411e+41_wp  ! (5.6e+33) m^-1
-  real(wp), parameter :: kilogram_joule_relationship = 8.987551787e+16_wp  ! (0.0) J
+  real(wp), parameter :: kilogram_joule_relationship = 8.987551787368176e+16_wp  ! (0.0) J
   real(wp), parameter :: kilogram_kelvin_relationship = 6.5096595e+39_wp  ! (3.7e+33) K
   real(wp), parameter :: lattice_parameter_of_silicon = 5.431020504e-10_wp  ! (8.9e-18) m
   real(wp), parameter :: Loschmidt_constant_27315_K_100_kPa = 2.6516467e+25_wp  ! (1.5e+19) m^-3
   real(wp), parameter :: Loschmidt_constant_27315_K_101325_kPa = 2.6867811e+25_wp  ! (1.5e+19) m^-3
-  real(wp), parameter :: mag_constant = 1.2566370614e-06_wp  ! (0.0) N A^-2 (obsolete)
+  real(wp), parameter :: mag_constant = 1.2566370614359173e-06_wp  ! (0.0) N A^-2 (obsolete)
   real(wp), parameter :: mag_flux_quantum = 2.067833831e-15_wp  ! (1.3e-23) Wb
   real(wp), parameter :: molar_gas_constant = 8.3144598_wp  ! (4.8e-06) J mol^-1 K^-1
   real(wp), parameter :: molar_mass_constant = 0.001_wp  ! (0.0) kg mol^-1
@@ -201,7 +201,7 @@ module codata
   real(wp), parameter :: molar_volume_of_ideal_gas_27315_K_100_kPa = 0.022710947_wp  ! (1.3e-08) m^3 mol^-1
   real(wp), parameter :: molar_volume_of_ideal_gas_27315_K_101325_kPa = 0.022413962_wp  ! (1.3e-08) m^3 mol^-1
   real(wp), parameter :: molar_volume_of_silicon = 1.205883214e-05_wp  ! (6.1e-13) m^3 mol^-1
-  real(wp), parameter :: Mo_x_unit = 1.00209952e-13_wp  ! (5.3e-20) m
+  real(wp), parameter :: Mo_x_unit = 1.00209952e-13_wp  ! (5.3e-20) m (obsolete)
   real(wp), parameter :: muon_Compton_wavelength = 1.173444111e-14_wp  ! (2.6e-22) m
   real(wp), parameter :: muon_Compton_wavelength_over_2_pi = 1.867594308e-15_wp  ! (4.2e-23) m (obsolete)
   real(wp), parameter :: muon_electron_mass_ratio = 206.7682826_wp  ! (4.6e-06)

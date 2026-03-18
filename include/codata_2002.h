@@ -4,7 +4,7 @@
  * ------------------------------
  * These constants are taken from CODATA Recommended Values of the Fundamental
  * Physical Constants. https://physics.nist.gov
- * Generated using SciPy version 1.6.3
+ * Generated using SciPy version 1.17.1
  * -----------------------------------------------------------------------------
  */
 
@@ -37,7 +37,7 @@ static const double codata_electron_deuteron_magn_moment_ratio = -2143.923493;  
 static const double codata_electron_muon_magn_moment_ratio = 206.7669894;  // (5.4e-06) (obsolete)
 static const double codata_electron_neutron_magn_moment_ratio = 960.9205;  // (0.00023) (obsolete)
 static const double codata_electron_proton_magn_moment_ratio = -658.2106862;  // (6.6e-06) (obsolete)
-static const double codata_magn_constant = 1.2566370614e-06;  // (0.0) N A^-2 (obsolete)
+static const double codata_magn_constant = 1.2566370614359173e-06;  // (0.0) N A^-2 (obsolete)
 static const double codata_magn_flux_quantum = 2.06783372e-15;  // (1.8e-22) Wb (obsolete)
 static const double codata_muon_magn_moment = -4.49044799e-26;  // (4e-33) J T^-1 (obsolete)
 static const double codata_muon_magn_moment_to_Bohr_magneton_ratio = -0.00484197045;  // (1.3e-10) (obsolete)

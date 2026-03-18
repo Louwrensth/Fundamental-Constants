@@ -4,7 +4,7 @@
  * ------------------------------
  * These constants are taken from CODATA Recommended Values of the Fundamental
  * Physical Constants. https://physics.nist.gov
- * Generated using SciPy version 1.6.3
+ * Generated using SciPy version 1.17.1
  * -----------------------------------------------------------------------------
  */
 
@@ -51,7 +51,7 @@ namespace codata {
   static const double atomic_unit_of_magnetizability = 7.891036433e-29;  // (2.7e-37) J T^-2
   static const double atomic_unit_of_mass = 9.10938215e-31;  // (4.5e-38) kg
   static const double atomic_unit_of_momentum = 1.992851565e-24;  // (9.9e-32) kg m s^-1
-  static const double atomic_unit_of_permittivity = 1.112650056e-10;  // (0.0) F m^-1
+  static const double atomic_unit_of_permittivity = 1.1126500560536183e-10;  // (0.0) F m^-1
   static const double atomic_unit_of_time = 2.418884326505e-17;  // (1.6e-12) 7 s
   static const double atomic_unit_of_velocity = 2187691.2541;  // (0.0015) m s^-1
   static const double Avogadro_constant = 6.02214179e+23;  // (3e+16) mol^-1
@@ -65,14 +65,14 @@ namespace codata {
   static const double Boltzmann_constant_in_eV_K = 8.617343e-05;  // (1.5e-10) eV K^-1
   static const double Boltzmann_constant_in_Hz_K = 20836644000.0;  // (36000.0) Hz K^-1
   static const double Boltzmann_constant_in_inverse_meters_per_kelvin = 69.50356;  // (0.00012) m^-1 K^-1 (obsolete)
-  static const double characteristic_impedance_of_vacuum = 376.730313461;  // (0.0) ohm (obsolete)
+  static const double characteristic_impedance_of_vacuum = 376.73031346177066;  // (0.0) ohm
   static const double classical_electron_radius = 2.8179402894e-15;  // (5.8e-24) m
   static const double Compton_wavelength = 2.4263102175e-12;  // (3.3e-21) m
   static const double Compton_wavelength_over_2_pi = 3.8615926459e-13;  // (5.3e-22) m (obsolete)
   static const double conductance_quantum = 7.7480917004e-05;  // (5.3e-14) S
   static const double conventional_value_of_Josephson_constant = 483597900000000.0;  // (0.0) Hz V^-1
   static const double conventional_value_of_von_Klitzing_constant = 25812.807;  // (0.0) ohm
-  static const double Cu_x_unit = 1.00207699e-13;  // (2.8e-20) m
+  static const double Cu_x_unit = 1.00207699e-13;  // (2.8e-20) m (obsolete)
   static const double deuteron_electron_mag_mom_ratio = -0.0004664345537;  // (3.9e-12)
   static const double deuteron_electron_mass_ratio = 3670.4829654;  // (1.6e-06)
   static const double deuteron_g_factor = 0.8574382308;  // (7.2e-09)
@@ -88,7 +88,7 @@ namespace codata {
   static const double deuteron_proton_mag_mom_ratio = 0.307012207;  // (2.4e-09)
   static const double deuteron_proton_mass_ratio = 1.99900750108;  // (2.2e-10)
   static const double deuteron_rms_charge_radius = 2.1402e-15;  // (2.8e-18) m
-  static const double electric_constant = 8.854187817e-12;  // (0.0) F m^-1 (obsolete)
+  static const double electric_constant = 8.854187817620389e-12;  // (0.0) F m^-1 (obsolete)
   static const double electron_charge_to_mass_quotient = -175882015000.0;  // (4400.0) C kg^-1
   static const double electron_deuteron_mag_mom_ratio = -2143.923498;  // (1.8e-05)
   static const double electron_deuteron_mass_ratio = 0.00027244371093;  // (1.2e-13)
@@ -149,7 +149,7 @@ namespace codata {
   static const double hertz_atomic_mass_unit_relationship = 4.4398216294e-24;  // (6.4e-33) u
   static const double hertz_electron_volt_relationship = 4.13566733e-15;  // (1e-22) eV
   static const double hertz_hartree_relationship = 1.519829846006e-16;  // (1e-27) E_h
-  static const double hertz_inverse_meter_relationship = 3.335640951e-09;  // (0.0) m^-1
+  static const double hertz_inverse_meter_relationship = 3.3356409519815204e-09;  // (0.0) m^-1
   static const double hertz_joule_relationship = 6.62606896e-34;  // (3.3e-41) J
   static const double hertz_kelvin_relationship = 4.7992374e-11;  // (8.4e-17) K
   static const double hertz_kilogram_relationship = 7.372496e-51;  // (3.7e-58) kg
@@ -169,7 +169,7 @@ namespace codata {
   static const double joule_hertz_relationship = 1.50919045e+33;  // (7.5e+25) Hz
   static const double joule_inverse_meter_relationship = 5.03411747e+24;  // (2.5e+17) m^-1
   static const double joule_kelvin_relationship = 7.242963e+22;  // (1.3e+17) K
-  static const double joule_kilogram_relationship = 1.112650056e-17;  // (0.0) kg
+  static const double joule_kilogram_relationship = 1.1126500560536185e-17;  // (0.0) kg
   static const double kelvin_atomic_mass_unit_relationship = 9.251098e-14;  // (1.6e-19) u
   static const double kelvin_electron_volt_relationship = 8.617343e-05;  // (1.5e-10) eV
   static const double kelvin_hartree_relationship = 3.1668153e-06;  // (5.5e-12) E_h
@@ -182,11 +182,11 @@ namespace codata {
   static const double kilogram_hartree_relationship = 2.06148616e+34;  // (1e+27) E_h
   static const double kilogram_hertz_relationship = 1.356392733e+50;  // (6.8e+42) Hz
   static const double kilogram_inverse_meter_relationship = 4.52443915e+41;  // (2.3e+34) m^-1
-  static const double kilogram_joule_relationship = 8.987551787e+16;  // (0.0) J
+  static const double kilogram_joule_relationship = 8.987551787368176e+16;  // (0.0) J
   static const double kilogram_kelvin_relationship = 6.509651e+39;  // (1.1e+34) K
   static const double lattice_parameter_of_silicon = 5.43102064e-10;  // (1.4e-17) m
   static const double Loschmidt_constant_27315_K_101325_kPa = 2.6867774e+25;  // (4.7e+19) m^-3
-  static const double mag_constant = 1.2566370614e-06;  // (0.0) N A^-2 (obsolete)
+  static const double mag_constant = 1.2566370614359173e-06;  // (0.0) N A^-2 (obsolete)
   static const double mag_flux_quantum = 2.067833667e-15;  // (5.2e-23) Wb
   static const double molar_gas_constant = 8.314472;  // (1.5e-05) J mol^-1 K^-1
   static const double molar_mass_constant = 0.001;  // (0.0) kg mol^-1
@@ -196,7 +196,7 @@ namespace codata {
   static const double molar_volume_of_ideal_gas_27315_K_100_kPa = 0.022710981;  // (4e-08) m^3 mol^-1
   static const double molar_volume_of_ideal_gas_27315_K_101325_kPa = 0.022413996;  // (3.9e-08) m^3 mol^-1
   static const double molar_volume_of_silicon = 1.20588349e-05;  // (1.1e-12) m^3 mol^-1
-  static const double Mo_x_unit = 1.00209955e-13;  // (5.3e-20) m
+  static const double Mo_x_unit = 1.00209955e-13;  // (5.3e-20) m (obsolete)
   static const double muon_Compton_wavelength = 1.173444104e-14;  // (3e-22) m
   static const double muon_Compton_wavelength_over_2_pi = 1.867594295e-15;  // (4.7e-23) m (obsolete)
   static const double muon_electron_mass_ratio = 206.7682823;  // (5.2e-06)

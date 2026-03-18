@@ -4,7 +4,7 @@
 ! ------------------------------
 ! These constants are taken from CODATA Recommended Values of the Fundamental
 ! Physical Constants. https://physics.nist.gov
-! Generated using SciPy version 1.6.3
+! Generated using SciPy version 1.17.1
 !-------------------------------------------------------------------------------
 
 module codata
@@ -36,7 +36,7 @@ module codata
   real(wp), parameter :: electron_muon_magn_moment_ratio = 206.7669894_wp  ! (5.4e-06) (obsolete)
   real(wp), parameter :: electron_neutron_magn_moment_ratio = 960.9205_wp  ! (0.00023) (obsolete)
   real(wp), parameter :: electron_proton_magn_moment_ratio = -658.2106862_wp  ! (6.6e-06) (obsolete)
-  real(wp), parameter :: magn_constant = 1.2566370614e-06_wp  ! (0.0) N A^-2 (obsolete)
+  real(wp), parameter :: magn_constant = 1.2566370614359173e-06_wp  ! (0.0) N A^-2 (obsolete)
   real(wp), parameter :: magn_flux_quantum = 2.06783372e-15_wp  ! (1.8e-22) Wb (obsolete)
   real(wp), parameter :: muon_magn_moment = -4.49044799e-26_wp  ! (4e-33) J T^-1 (obsolete)
   real(wp), parameter :: muon_magn_moment_to_Bohr_magneton_ratio = -0.00484197045_wp  ! (1.3e-10) (obsolete)
