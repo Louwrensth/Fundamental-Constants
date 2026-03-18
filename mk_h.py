@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 import scipy.version
-import scipy.constants.codata as _cd
+import scipy.constants._codata as _cd
 
 def make_h_sources(output_dir = Path('.')):
     '''Write .h source files to an output_dir'''
@@ -16,6 +16,7 @@ def make_h_sources(output_dir = Path('.')):
         "codata_2010": _cd._physical_constants_2010,
         "codata_2014": _cd._physical_constants_2014,
         "codata_2018": _cd._physical_constants_2018,
+        "codata_2022": _cd._physical_constants_2022,
     }.items():
 
         # Namespace begins

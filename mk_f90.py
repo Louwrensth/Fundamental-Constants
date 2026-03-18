@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 import re
 from pathlib import Path
-import mpmath as mp
+import mpmath
 import scipy.version
-import scipy.constants.codata as _cd
+import scipy.constants._codata as _cd
 
 def make_f90_sources(output_dir = Path('.')):
     '''Write .f90 source files to an output_dir'''
     ###
     # Write multi-precision math constants
     # they are better than double-limited standard math (which are limited to 15 digits)
-    mp.dps = 64  # go for 64 digits
+    mpmath.mp.dps = 64  # go for 64 digits
     math_constants = {
-        "M_PI": mp.pi(),
+        "M_PI": mpmath.mp.pi(),
     }
 
     # Fortran module begins
@@ -34,7 +34,7 @@ module {module_name}
   implicit none
 """.format(
                 file_name=output_file.name, module_name=module_name,
-                mpmath_version=mp.__version__
+                mpmath_version=mpmath.__version__
             )
         )  # Traverse mathematical constant name,value pairs
         for name, value in math_constants.items():
@@ -52,6 +52,7 @@ module {module_name}
         "codata_2010": _cd._physical_constants_2010,
         "codata_2014": _cd._physical_constants_2014,
         "codata_2018": _cd._physical_constants_2018,
+        "codata_2022": _cd._physical_constants_2022,
     }.items():
 
         # Fortran module begins

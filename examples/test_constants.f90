@@ -1,5 +1,5 @@
 include 'mathematical_constants.f90'  ! Excellent math constant lives here
-include 'codata_2018.f90'      ! Recommended physical constants since 2018
+include 'codata_2022.f90'      ! Recommended physical constants since 2022
 
 program test_physical_constants
   ! It is recommended to use your own names for the constants as the CODATA

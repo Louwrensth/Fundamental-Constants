@@ -1,6 +1,6 @@
 #include <cstdio>
 #include <math.h>            // Excellent math constants live here
-#include <codata_2018.hpp>   // Recommended physical constants since 2018
+#include <codata_2022.hpp>   // Recommended physical constants since 2022
 
 int main(int argc, const char* argv[])
 {
