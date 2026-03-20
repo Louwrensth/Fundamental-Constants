@@ -1,4 +1,3 @@
-
 # Fundamental Constants
 
 Fundamental Constants of Physical Quantities with values according to the
@@ -102,3 +101,8 @@ program test_physical_constants
 
 end program test_physical_constants
 ```
+
+## Legal
+
+IMAS-Python is Copyright 2021-2023, 2026 ITER Organization
+It is licensed under [LGPL 3.0](LICENSE.txt).
