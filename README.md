@@ -32,7 +32,7 @@ use namespaces. Instead, the globally defined constants are all prefixed with
 ```
 #include <stdio.h>
 #include <math.h>          // Excellent math constants live here
-#include <codata_2018.h>   // Recommended physical constants since 2018
+#include <codata_2022.h>   // Recommended physical constants since 2022
 
 int main(int argc, const char* argv[])
 {
@@ -57,7 +57,7 @@ to access the constant, but the example is otherwise identical to the above:
 ```
 #include <cstdio>
 #include <math.h>            // Excellent math constants live here
-#include <codata_2018.hpp>   // Recommended physical constants since 2018
+#include <codata_2022.hpp>   // Recommended physical constants since 2022
 
 int main(int argc, const char* argv[])
 {
@@ -86,7 +86,7 @@ The constants are found in the `codata` (`mathematical_constants`) module name:
 
 ```
 include 'mathematical_constants.f90'  ! Excellent math constant lives here
-include 'codata_2018.f90'      ! Recommended physical constants since 2018
+include 'codata_2022.f90'      ! Recommended physical constants since 2022
 
 program test_physical_constants
   ! It is recommended to use your own names for the constants as the CODATA
@@ -98,7 +98,6 @@ program test_physical_constants
 
   print *,e_mass
   print *,PI
-
 end program test_physical_constants
 ```
 
