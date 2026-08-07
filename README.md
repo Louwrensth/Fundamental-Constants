@@ -10,18 +10,18 @@ a commit. This ensures consistency, provenance, and ease of installation with
 dormant dependency on SciPy, until CODATA publishes a new set of recommended
 values every four years.
 
-Although hosted as part of IMAS on git.iter.org, this package is expressly not
+Although originally developed as part of IMAS, this package is expressly not
 tied to IMAS and can be freely used anywhere without modification.
 
-Homepage: https://imas.iter.org/ \
-Contact: imas-support@iter.org \
-Repository: https://git.iter.org/projects/IMAS/repos/fundamental-constants
+Homepage: <https://imas.iter.org/> \
+Contact: <imas-support@iter.org> \
+Repository: <https://github.com/iterorganization/Fundamental-Constants>
 
-# Examples
+## Examples
 
 Please see the `examples` directory to find source files of the examples below.
 
-## C / C++
+### C / C++
 
 There are two header files available, one for C/C++ and one for C++ only.
 
@@ -29,7 +29,7 @@ They don't differ very much. The only difference is that the C header does not
 use namespaces. Instead, the globally defined constants are all prefixed with
 `codata_` for clarity and to prevent clashes.
 
-```
+```c
 #include <stdio.h>
 #include <math.h>          // Excellent math constants live here
 #include <codata_2022.h>   // Recommended physical constants since 2022
@@ -49,12 +49,12 @@ int main(int argc, const char* argv[])
 }
 ```
 
-## C++ only
+### C++ only
 
 If using the `.hpp` header for C++, one uses the `codata` namespace
 to access the constant, but the example is otherwise identical to the above:
 
-```
+```c++
 #include <cstdio>
 #include <math.h>            // Excellent math constants live here
 #include <codata_2022.hpp>   // Recommended physical constants since 2022
@@ -74,7 +74,7 @@ int main(int argc, const char* argv[])
 }
 ```
 
-## Fortran (2008+)
+### Fortran (2008+)
 
 The Fortran include files follow the Fortran 2008 standard because of the use
 of the `iso_fortran_env` feature providing the kind parameter named `real64`.
@@ -84,7 +84,7 @@ it is provided here for convenience.
 
 The constants are found in the `codata` (`mathematical_constants`) module name:
 
-```
+```fortran
 include 'mathematical_constants.f90'  ! Excellent math constant lives here
 include 'codata_2022.f90'      ! Recommended physical constants since 2022
 
